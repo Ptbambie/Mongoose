@@ -81,8 +81,6 @@ async function startServer() {
       }
     });
 
-    // Reste de votre configuration et routes...
-
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
     });

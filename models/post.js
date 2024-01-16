@@ -4,7 +4,7 @@ const postSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    trim: true, // Supprime les espaces inutiles avant et après le titre
+    trim: true, 
   },
   content: {
     type: String,
@@ -16,9 +16,9 @@ const postSchema = new mongoose.Schema({
   },
 });
 
-// Ajoutez une méthode statique pour récupérer toutes les publications
+
 postSchema.statics.getAllPosts = async function () {
-  return this.find().sort({ createdAt: -1 }); // Trie par date de création, le plus récent en premier
+  return this.find().sort({ createdAt: -1 }); 
 };
 
 const Post = mongoose.model("Post", postSchema);
