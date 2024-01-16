@@ -18,6 +18,7 @@ async function startServer() {
     // Route POST pour créer une publication
     app.post("/posts", async (req, res) => {
       try {
+        console.log("Request body:", req.body); 
         const { title, content } = req.body;
 
         if (!title || !content) {
